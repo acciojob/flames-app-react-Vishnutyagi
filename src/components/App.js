@@ -76,12 +76,12 @@ function App() {
         return(
             <div id="main">
                <form>
-                    <input type="text" id="input1" onChange={handle1}/>
-                    <input type="text" id="input2" onChange={handle2}/>
-                    <button id="calculate_relationship" onClick={check}>Calculate Relationship Future</button>
-                    <button type="reset" id="clear" onClick={cleared}>Clear</button>
+                    <input name="name1" data-testid="input1" type="text" id="input1" onChange={handle1}/>
+                    <input name="name2" type="text" data-testid="input2" id="input2" onChange={handle2}/>
+                    <button data-testid="calculate_relationship" id="calculate_relationship" onClick={check}>Calculate Relationship Future</button>
+                    <button data-testid="clear" type="reset" id="clear" onClick={cleared}>Clear</button>
                </form>
-               <h3>{relation}</h3>
+               <h3 data-testid="answer">{relation}</h3>
             </div>
         );
 }
